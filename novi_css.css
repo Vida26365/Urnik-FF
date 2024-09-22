@@ -1,0 +1,25 @@
+table {
+    border: 1px solid !important;
+    width: 95% !important;
+    border-collapse: collapse !important;
+  }
+
+  tr {
+    height: 70px !important;
+  }
+
+
+td:not(:empty):not(:has(a)){
+    background-color: brown !important;
+}
+td:has(a){
+    background-color: blueviolet !important;
+}
+
+  tr:nth-child(1){
+    height: 10px !important;
+  }
+
+text {
+    display: none !important;
+}
