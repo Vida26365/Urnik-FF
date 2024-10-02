@@ -10,7 +10,8 @@
       "128": "images.jpg"
     },
     "background": {
-    "service_worker": "odzadje.js"
+      "scripts": ["spremeni_html.js", "odzadje.js"],
+      "service_worker": "odzadje.js"
     },
     "action": {
         "default_icon": {
@@ -22,13 +23,19 @@
     },
     "permissions": ["activeTab", "scripting"],
     "commands": {
-    "_execute_action": {
-      "suggested_key": {
-        "default": "Ctrl+B",
-        "mac": "Command+B"
+      "_execute_action": {
+        "suggested_key": {
+          "default": "Ctrl+B",
+          "mac": "Command+B"
+        }
       }
+    },
+    "content_scripts": [
+    {
+      "matches": ["https://urnik.ff.uni-lj.si/*"],
+      "js": ["spremeni_html.js"]
     }
-  }
+  ]
 }
 
 
